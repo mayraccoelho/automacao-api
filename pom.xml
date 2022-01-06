@@ -33,6 +33,20 @@
             <artifactId>json-schema-validator</artifactId>
             <version>4.4.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.1.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.1.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
