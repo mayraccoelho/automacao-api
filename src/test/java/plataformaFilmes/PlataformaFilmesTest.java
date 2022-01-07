@@ -23,7 +23,7 @@ public class PlataformaFilmesTest {
 
     @Test
     public void validarLogin(){
-        RestUtils.setBaseUri("http://localhost:8080/");
+        RestUtils.setBaseURI("http://localhost:8080/");
 
         Response response = RestUtils.post(json, ContentType.JSON, "auth");
 
@@ -33,7 +33,7 @@ public class PlataformaFilmesTest {
 
     @BeforeAll
     public static void validarLoginMap(){
-        RestUtils.setBaseUri("http://localhost:8080/");
+        RestUtils.setBaseURI("http://localhost:8080/");
         LoginMap.initLogin();
 
         Response response = RestUtils.post(LoginMap.getLogin(), ContentType.JSON, "auth");

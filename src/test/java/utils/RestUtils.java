@@ -10,15 +10,15 @@ public class RestUtils {
 
     private static Response response;
 
-    public Response getResponse(){
+    public static Response getResponse(){
         return response;
     }
 
-    public static void setBaseUri(String uri) {
+    public static void setBaseURI(String uri) {
         RestAssured.baseURI = uri;
     }
 
-    public static String getBaseUri(){
+    public static String getBaseURI(){
         return RestAssured.baseURI;
     }
 
