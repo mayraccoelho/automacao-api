@@ -13,7 +13,7 @@ import java.util.Locale;
         plugin = {"json:target/reports/CucumberReports.json", "pretty"},
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = "src/test/resources/features/",
-        tags = ""
+        tags = "@categorias"
 )
 public class RunnerTest {
 

@@ -17,9 +17,10 @@ public class LoginSteps {
         LoginMap.initLogin();
         RestUtils.setBaseURI(url);
     }
+
     @Quando("envio uma requisicao do tipo POST de Login")
     public void envioUmaRequisicaoDoTipoPOSTDeLogin() {
-        RestUtils.post(LoginMap.getLogin(), ContentType.JSON,"auth");
+        RestUtils.post(LoginMap.getLogin(), ContentType.JSON, "auth");
     }
 
     @E("armazeno o token que recebo do response de Login")
@@ -32,5 +33,12 @@ public class LoginSteps {
         LoginMap.initLogin();
         RestUtils.setBaseURI(url);
         LoginMap.getLogin().putAll(map);
+    }
+
+    @Dado("que tenha realizado o login com dados validos")
+    public void queTenhaRealizadoOLoginComDadosValidos() {
+        queTenhaUmPayloadValidoDaAPIDeLogin();
+        envioUmaRequisicaoDoTipoPOSTDeLogin();
+        armazenoOTokenQueReceboDoResponseDeLogin();
     }
 }
